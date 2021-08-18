@@ -20,7 +20,5 @@ int main (){
     //result
     printf("R = %d\nV = %d\nT = %d\nD = %d\nL = %d\n",r,v,t,d,l);
 
-
-
     return 0;
 }
