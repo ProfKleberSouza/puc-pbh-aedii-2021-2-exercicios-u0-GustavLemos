@@ -6,7 +6,7 @@ int main(){
 
     int nSize = 0;
     int maior = 0;
-    int menor = 1000000;
+    int menor = 0;
 
     //input nSize
     scanf("%d",&nSize);
@@ -24,6 +24,8 @@ int main(){
             maior = arrayN[j];
             }
     }
+
+    menor = maior;
 
     for(int k = 0; k < nSize ; k++){
         if(arrayN[k] < menor){
