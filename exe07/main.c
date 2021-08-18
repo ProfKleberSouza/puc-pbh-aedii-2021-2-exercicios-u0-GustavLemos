@@ -1,8 +1,38 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main() {
-   int n1, n2;
-   scanf("%i %i", &n1, &n2);
-   printf("SOMA = %i\n", n1+n2);
-   return 0;
+int main(){
+
+    int nSize = 0;
+    int maior = 0;
+    int menor = 1000000;
+
+    //input nSize
+    scanf("%d",&nSize);
+
+    int arrayN[nSize];
+
+    // inputs in array
+    for(int i = 0; i < nSize; i++){
+       scanf("\n%d",&arrayN[i]);
+    }
+
+    //operations
+    for(int j = 0; j < nSize ; j++){
+        if(arrayN[j] > maior){
+            maior = arrayN[j];
+            }
+    }
+
+    for(int k = 0; k < nSize ; k++){
+        if(arrayN[k] < menor){
+            menor = arrayN[k];
+            }
+    }
+
+    //results
+    printf("MENOR = %d\nMAIOR = %d",menor,maior);
+
+    return 0;
 }
