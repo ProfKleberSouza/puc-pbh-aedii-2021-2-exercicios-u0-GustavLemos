@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-//ERRO NAS TRES MAIORES NOTAS E NAO ESTA IMPRIMINDO O NOME
-
 int main(){
 
     int nSize = 0;
     float maior = 0;
-    float nomeApoio[30];
+    char nomeApoio[30];
+    float aux = 0;
     float media = 0;
 
     typedef struct {
@@ -29,16 +28,18 @@ int main(){
 
     //operations
     for(int x = 0; x < nSize; x++){
-        for(int j = 0; j < nSize; j++){
-            if(alunos[j].nota>maior){
-                maior = alunos[j].nota;
-                //strcpy(nomeApoio,alunos[j].nome);
+        for(int j = x + 1; j < nSize; j++){
+            if(alunos[x].nota < alunos[j].nota){
+                aux=alunos[j].nota;
+                alunos[j].nota=alunos[x].nota;
+                alunos[x].nota=aux;
             }
         }
-
-        alunosTresMaioresNotas[x].nota= maior;
-       // strcpy(alunosTresMaioresNotas[x].nome, nomeApoio);
-
+    }
+    
+    for(int n=0;n<3;n++){
+       alunosTresMaioresNotas[n].nota=alunos[n].nota;
+       strcpy(alunosTresMaioresNotas[n].nome,alunos[n].nome);
     }
 
 
