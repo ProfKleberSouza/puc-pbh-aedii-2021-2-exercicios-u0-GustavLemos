@@ -4,11 +4,11 @@
 
 int main() {
 
-    int n[10];
+    int n[6];
     int cont = 0;
 
     //input
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < 6; i++)
         scanf("%d",&n[i]);
 
     //operation and result
