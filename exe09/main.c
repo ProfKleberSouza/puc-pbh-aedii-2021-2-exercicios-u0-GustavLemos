@@ -50,10 +50,10 @@ int main(){
     media = media/nSize;
 
     //results
-    printf("NOTA MEDIA = %.2f",media);
+    printf("NOTA MEDIA = %.1f",media);
 
     for(int m = 0; m < 3; m++){
-        printf("\n%s %f",alunosTresMaioresNotas[m].nome,alunosTresMaioresNotas[m].nota);
+        printf("\n%s %.1f",alunosTresMaioresNotas[m].nome,alunosTresMaioresNotas[m].nota);
     }
 
     return 0;
